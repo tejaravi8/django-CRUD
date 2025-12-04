@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<nav class="bg-blue-600 text-white py-4 px-6 flex justify-between">
+    <h1 class="text-xl font-bold">Student Manager</h1>
+    <div class="space-x-4">
+        <a class="hover:underline" href="/">Home</a>
+        <a class="hover:underline" href="/students/">Students</a>
+        <a class="hover:underline" href="/add/">Add Student</a>
+        <a class="hover:underline" href="/dashboard/">Dashboard</a>
+    </div>
+</nav>
+
+
+{% if messages %}
+    <div class="px-6 mt-4">
+        {% for msg in messages %}
+        <div class="p-3 rounded mb-2 
+            {% if msg.tags == 'success' %} bg-green-200 text-green-800
+            {% elif msg.tags == 'error' %} bg-red-200 text-red-800
+            {% endif %}
+        ">
+            {{ msg }}
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div class="container mx-auto px-6 mt-6">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

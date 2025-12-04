@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="text-center mt-10">
+
+    <h1 class="text-4xl font-bold text-gray-800">
+        Welcome to the <span class="text-blue-600">Student Manager</span> 🎓
+    </h1>
+
+    <p class="text-gray-600 mt-3 text-lg">
+        Manage your students easily — Add, Edit, Delete, and View.
+    </p>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold mb-3 text-blue-600">📋 All Students</h3>
+            <p class="text-gray-600 mb-4">
+                View and manage all registered students.
+            </p>
+            <a href="/students/" class="bg-blue-600 text-white px-4 py-2 rounded block text-center hover:bg-blue-700">
+                View Students
+            </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold mb-3 text-green-600">➕ Add Student</h3>
+            <p class="text-gray-600 mb-4">
+                Add a new student to the database with ease.
+            </p>
+            <a href="/add/" class="bg-green-600 text-white px-4 py-2 rounded block text-center hover:bg-green-700">
+                Add Student
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold mb-3 text-purple-600">📊 Dashboard</h3>
+            <p class="text-gray-600 mb-4">
+                See student statistics and insights (coming soon).
+            </p>
+            <a href="/dashboard/" class="bg-purple-600 text-white px-4 py-2 rounded block text-center hover:bg-purple-700">
+                Open Dashboard
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
